@@ -442,7 +442,7 @@
           </address>
         </div>
         <div class="footer-social-container">
-          <h3 class="footer-social-header tertiary-header">Dołącz do nas</h3>
+          <h3 class="footer-headers tertiary-header">Dołącz do nas</h3>
           <ul class="social-links-list footer-social-links-list styles-for-lists">
             <li class="social-link-item">
               <a class="social-link-link social-link-link-dark link-dec" href="https://www.instagram.com/" target="_blank">
@@ -474,19 +474,131 @@
             </li>
           </ul>
         </div>
+        <div class="footer__newsletter-container">
+          <form class="newsletter-form">
+            <h3 class="footer-headers tertiary-header">Zapisz się do newslettera</h3>
+            <div class="newsletter">
+              <label class="newsletter_label" for="newsletter-email">E-mail</label>
+              <input class="newsletter__input" type="email" name="newsletterEmail" id="newsletter-email" placeholder="E-mail">
+              <button type="submit" class="newsletter-btn">
+                Zapisz się
+                <svg class="newsletter-icon">
+                  <use href="./images/icons.svg#icon-send-form"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
 
     <!-- MODAL WINDOW -->
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal-window">
+      <div class="modal">
         <button class="close-btn" type="button" data-modal-close>
-          <svg class="close-btn-icon">
-            <use href="./images/icons.svg#icon-close-btn"></use>
+          <svg class="cross-icon">
+            <use href="./images/icons.svg#icon-cross"></use>
           </svg>
         </button>
+        <h2 class="modal__form-header">Zostaw swoje dane w formularzu poniżej</h2>
+        <form class="application-form">
+          <label class="application-form__field" for="user-name">
+            Imie
+            <span class="application-form__input-wrapper">
+              <input class="application-form__input" type="text" name="userName" id="user-name">
+              <svg class="application-form__icon">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="application-form__field" for="phone-number">
+            Telefon
+            <span class="application-form__input-wrapper">
+              <input class="application-form__input" type="tel" name="phoneNumber" id="phone-number">
+              <svg class="application-form__icon">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="application-form__field" for="e-mail">
+            Email
+            <span class="application-form__input-wrapper">
+              <input class="application-form__input" type="email" name="email" id="e-mail">
+              <svg class="application-form__icon">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="application-form__field" for="user-message">
+            Komentarz
+            <textarea class="application-form__message" name="userMessage" id="user-message" placeholder="Wprowadź tekst"></textarea>
+          </label>
+
+            
+          <label class="application-form__policy" for="user-policy">
+            <input class="application-form__policy-input visually-hidden" type="checkbox" name="userPolicy" id="user-policy" value="accept-policy">
+            <span>
+              Oświadczam iż akceptuję <a href="#">Regulamin</a> i <a href="">Politykę Prywatności.</a>
+            </span>
+          </label>
+          
+          <button class="application-form__btn" type="submit">Wyślij</button>
+        </form>
       </div>
     </div>
+
+    <!-- BACKDROP
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg class="close-btn-icon">
+            <use href="images/sprite.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <h2 class="modal__form-header">Rezerwacja online</h2>
+        <form class="modal__form" action="#">
+
+          <label for="" class="modal__form-field">
+            Imię
+            <span class="modal__form-input-wrapper">
+              <input class="modal__form-input" type="text" name="user_name">
+              <svg class="modal__form-icon">
+                <use href="./images/sprite.svg#icon-person"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label for="" class="modal__form-field">
+            Telefon
+            <span class="modal__form-input-wrapper">
+              <input class="modal__form-input" type="tel" name="phone_number">
+              <svg class="modal__form-icon">
+                <use href="./images/sprite.svg#icon-phone-form"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="modal__form-field" for="user_message">
+            Komentarz
+            <textarea class="modal__form-message" name="user_message" id="user_message" placeholder="Wprowadź tekst"></textarea>
+          </label>
+
+          <span class="modal-form__policy-wrapper">
+            <input class="modal__form-policy visually-hidden" id="user_policy" name="user_policy" type="checkbox" value="accept_policy">
+            <label class="modal__form-policy-text" for="user_policy">
+              Wyrażam zgodę na <a href="#">Regulamin</a>
+            </label>
+          </span>
+
+          <button class="modal__form-btn" type="submit">Wyślij</button>
+
+        </form>
+      </div>
+    </div> -->
+
 
     <!-- SCRIPT FOR MODAL WINDOW -->
     <script src="./js/modal.js"></script>
