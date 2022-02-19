@@ -14,6 +14,8 @@
   --colorBorder-projects: #eeeeee;
   --colorPrimary-icons: #afb1b8;
   --colorSecondaryBackground-icons: #ffffff1a;
+  --colorBackdropBorder: #21212133;
+  --colorBackdropPlaceholder: #75757580;
   --fontStyle-main: normal;
   --fontStyle-italic: italic;
   --fontWeight-medium: 500;
@@ -26,9 +28,11 @@
   --fontSize-26: 26px;
   --fontSize-36: 36px;
   --fontSize-44: 44px;
+  --fontSizeFormLabel: 12px;
   --lettSpacing-02: 0.02em;
   --lettSpacing-03: 0.03em;
   --lettSpacing-06: 0.06em;
+  --lettSpacingFormLabel: 0.01em;
 }
 
 body {
@@ -728,9 +732,134 @@ img {
   letter-spacing: var(--lettSpacing-03);
 }
 
+.application-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.application-form__field {
+  margin-bottom: 10px;
+  font-size: var(--fontSizeFormLabel);
+  line-height: 1.167;
+  letter-spacing: var(--lettSpacingFormLabel);
+}
+
+.application-form__label {
+  color: var(--colorSecondary);
+}
+
+.application-form__input-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+
+.application-form__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--colorBackdropBorder);
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .application-form__icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
   width: 18px;
   height: 18px;
   fill: var(--colorPrimary);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.application-form__message {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-top: 4px;
+  border: 1px solid var(--colorBackdropBorder);
+  border-radius: 4px;
+  font-size: var(--fontSizeFormLabel);
+  line-height: 1.167;
+  letter-spacing: var(--lettSpacingFormLabel);
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__form-message::placeholder {
+  color: var(--colorBackdropPlaceholder);
+}
+
+.application-form__input:focus,
+.application-form__message:focus {
+  outline: none;
+  border-color: var(--colorAccent);
+}
+
+.application-form__input:focus + .application-form__icon {
+  fill: var(--colorAccent);
+}
+
+.application-form__policy {
+  margin: 20px auto 30px auto;
+}
+
+.application-form__policy-checkbox {
+  position: relative;
+}
+
+.application-form__policy-input {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--colorPrimary);
+  border-radius: 2px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.check-icon {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  fill: #fff;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.application-form__policy-input:checked + .check-icon {
+  visibility: visible;
+}
+
+.application-form__policy-text {
+  line-height: 1.714;
+  letter-spacing: var(--lettSpacing-03);
+  color: #757575;
+}
+
+.application-form__link {
+  color: var(--colorAccent);
+}
+
+.application-form__btn {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  font-weight: var(--fontWeight-bold);
+  font-size: var(--fontSize-16);
+  line-height: 1.875;
+  letter-spacing: var(--lettSpacing-06);
+  text-align: center;
+  color: var(--colorWhite);
+  background-color: var(--colorAccent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 /* ===== END BACKDROP ===== */
