@@ -771,6 +771,7 @@ img {
   border: 1px solid var(--colorBackdropBorder);
   border-radius: 4px;
   padding-left: 42px;
+  outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -795,6 +796,7 @@ img {
   line-height: 1.167;
   letter-spacing: var(--lettSpacingFormLabel);
   resize: none;
+  outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -804,7 +806,6 @@ img {
 
 .application-form__input:focus,
 .application-form__message:focus {
-  outline: none;
   border-color: var(--colorAccent);
 }
 
